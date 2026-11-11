@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Account</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bank Account</h1>
+  <p class="subtitle">Aplikasi Pengelolaan Saldo</p>
+
+  <div class="card">
+    <label>Nama Pemilik</label>
+    <input type="text" id="inputNama" placeholder="Masukkan nama pemilik">
+    <label>Saldo Awal</label>
+    <input type="number" id="inputSaldo" placeholder="Masukkan saldo awal">
+    <button class="btn-biru-tua" onclick="buatAkun()">Buat Akun</button>
+    <p id="pesanBuat"></p>
+  </div>
+
+  <div class="card" id="menuTransaksi" style="display:none;">
+    <h2 class="halo">Halo, <span id="nama">-</span></h2>
+    <p class="label-saldo">Saldo Saat Ini</p>
+    <p class="saldo-besar">Rp <span id="saldo">0</span></p>
+    <label>Jumlah Uang</label>
+    <input type="number" id="jumlah" placeholder="Masukkan jumlah uang">
+    <div class="btns">
+      <button class="btn-hijau" onclick="setor()">Deposit</button>
+      <button class="btn-pink" onclick="tarik()">Withdraw</button>
+    </div>
+    <button class="btn-biru" onclick="cekSaldo()">Cek Saldo</button>
+    <p id="pesan"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
